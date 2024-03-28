@@ -1,0 +1,9 @@
+{
+  "name": "couchberg",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {},
+  "devDependencies": {
+    "turbo": "^1.12.4"
+  }
+}
