@@ -1,4 +1,19 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "pipeline": {}
+  "pipeline": {
+    "topo": {
+      "dependsOn": ["^topo"]
+    },
+    "format": {
+      "outputs": ["node_modules/.cache/.prettiercache"],
+      "outputMode": "new-only"
+    },
+    "typecheck": {
+      "dependsOn": ["^topo"],
+      "outputs": ["node_modules/.cache/tsbuildinfo.json"]
+    },
+    "clean": {
+      "cache": false
+    }
+  }
 }
