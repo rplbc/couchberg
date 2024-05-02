@@ -23,10 +23,15 @@ jobs:
       - name: install pnpm
         run: npm i pnpm@9.0.6 -g
 
+      - name: check corepack version
+        run: corepack -v
+
       - name: Install Dependencies
         run: pnpm install
 
       - name: Create Release Pull Request
         uses: changesets/action@v1
+        with:
+          version: pnpm changeset version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
