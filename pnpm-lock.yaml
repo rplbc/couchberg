@@ -45,6 +45,9 @@ importers:
       '@couchberg/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
+      '@couchberg/tailwind-config':
+        specifier: workspace:*
+        version: link:../../tooling/tailwind
       '@couchberg/typescript-config':
         specifier: workspace:*
         version: link:../../tooling/typescript
@@ -70,7 +73,7 @@ importers:
         specifier: ^5.0.5
         version: 5.0.5
       tailwindcss:
-        specifier: ^3.4.1
+        specifier: ^3.4.3
         version: 3.4.3
       typescript:
         specifier: 5.4.3
@@ -85,6 +88,25 @@ importers:
         specifier: ^2.5.0
         version: 2.5.0(prettier@3.2.5)
     devDependencies:
+      '@couchberg/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript
+      rimraf:
+        specifier: ^5.0.5
+        version: 5.0.5
+      typescript:
+        specifier: 5.4.3
+        version: 5.4.3
+
+  tooling/tailwind:
+    dependencies:
+      tailwindcss:
+        specifier: ^3.4.3
+        version: 3.4.3
+    devDependencies:
+      '@couchberg/prettier-config':
+        specifier: workspace:*
+        version: link:../prettier
       '@couchberg/typescript-config':
         specifier: workspace:*
         version: link:../typescript

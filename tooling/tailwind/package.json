@@ -1,0 +1,24 @@
+{
+  "name": "@couchberg/tailwind-config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./base": "./base.ts"
+  },
+  "scripts": {
+    "clean": "rimraf .turbo node_modules",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "typecheck": "tsc --noEmit"
+  },
+  "prettier": "@couchberg/prettier-config",
+  "dependencies": {
+    "tailwindcss": "^3.4.3"
+  },
+  "devDependencies": {
+    "@couchberg/prettier-config": "workspace:*",
+    "@couchberg/typescript-config": "workspace:*",
+    "rimraf": "^5.0.5",
+    "typescript": "5.4.3"
+  }
+}
